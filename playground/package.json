@@ -1,0 +1,7 @@
+{
+    "name":"playground",
+    "scripts": {
+        "dev":"node ../build.mjs playground --dev",
+        "start":"node dist/cjs/index.cjs"
+    }
+}

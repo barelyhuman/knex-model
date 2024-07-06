@@ -1,0 +1,51 @@
+{
+  "name": "knex-model",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "reaper <ahoy@barelyhuman.dev>",
+  "type": "module",
+  "prettier": "@barelyhuman/prettier-config",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": {
+        "import": "./dist/esm/index.d.mts",
+        "default": "./dist/cjs/index.d.cts"
+      },
+      "import": "./dist/esm/index.mjs",
+      "default": "./dist/esm/index.cjs"
+    }
+  },
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.mjs",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "./build.mjs --dev",
+    "playground:dev": "./build.mjs playground --dev",
+    "build": "./build.mjs",
+    "test": "uvu -r tsm ./tests"
+  },
+  "devDependencies": {
+    "@barelyhuman/prettier-config": "^1.1.0",
+    "esbuild": "^0.23.0",
+    "esbuild-multicontext": "^0.11.0",
+    "knex": "^3.1.0",
+    "prettier": "^3.3.2",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "tsm": "^2.3.0",
+    "typescript": "^5.5.3",
+    "uvu": "^0.5.6"
+  },
+  "peerDependencies": {
+    "knex": "^3.1.0"
+  },
+  "packageManager": "pnpm@9.4.0"
+}
